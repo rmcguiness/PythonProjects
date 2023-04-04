@@ -15,18 +15,16 @@ def encrypt(text, shift):
     encoded_msg = ''
     shift_alph = alphabet_shift(shift)
     for letter in text:
-        for i in range(len(alphabet)):
-            if alphabet[i] == letter:
-                encoded_msg += shift_alph[i]
+        index = alphabet.index(letter)
+        encoded_msg += shift_alph[index]
     return(encoded_msg)
 
 def decrypt(code, shift):
     decoded_msg = ''
     shift_alph = alphabet_shift(shift)
     for letter in code:
-        for i in range(len(shift_alph)):
-            if shift_alph[i] == letter:
-                decoded_msg += alphabet[i]
+        index = shift_alph.index(letter)
+        decoded_msg += alphabet[index]
     return(decoded_msg)
 
 if direction == 'encode':
