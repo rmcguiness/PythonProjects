@@ -31,3 +31,5 @@ if direction == 'encode':
     print(encrypt(text, shift))
 elif direction == 'decode':
     print(decrypt(text, shift))
+else:
+    print('direction not specified')
