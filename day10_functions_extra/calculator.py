@@ -18,13 +18,13 @@ operations = {
     "/" : divide,
 }
 calculate = True
+n1 = float(input('Input first number:'))
 while calculate:
-    n1 = float(input('Input first number:'))
     for op in operations:
         print(op)
     operation = input('Input an Operation:')
 
-    n2 = float(input('Input Second number:'))
+    n2 = float(input('Input another number:'))
 
     function = operations[operation]
     ans = function(n1, n2)
@@ -34,3 +34,5 @@ while calculate:
 
     if cont == "n":
         calculate = False
+    else:
+        n1 = ans
