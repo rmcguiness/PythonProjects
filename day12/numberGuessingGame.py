@@ -24,9 +24,7 @@ def game():
         elif guess < number:
             print('Too Low')
         
-        if i <= guesses:
-            print('Guess again')
-        else:
+        if i > guesses:
             print('You lose!')
     play_again = input('Do you want to play again?(y/n)').lower()
     if play_again == 'y':
