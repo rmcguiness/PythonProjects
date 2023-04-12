@@ -13,8 +13,8 @@ def game():
         print('Invalid input try again')
         game()
     
-    for i in range(1,guesses):
-        print(f'You have {guesses-i+1} guesses remaining.')
+    for i in range(0,guesses):
+        print(f'You have {guesses-i} guesses remaining.')
         guess = int(input('Make a guess: '))
         if guess == number:
             print("Congrats you win!!!")
@@ -24,7 +24,7 @@ def game():
         elif guess < number:
             print('Too Low')
         
-        if i > guesses:
+        if i == guesses -1:
             print('You lose!')
     play_again = input('Do you want to play again?(y/n)').lower()
     if play_again == 'y':
