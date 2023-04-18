@@ -1,7 +1,7 @@
 from game_data import data
 import random
 from art import logo, vs
-from replit import clear
+import os
 
 def get_random_account():
   """Get data from random account"""
@@ -48,7 +48,7 @@ def game():
     b_follower_count = account_b["follower_count"]
     is_correct = check_answer(guess, a_follower_count, b_follower_count)
 
-    clear()
+    os.system('clear')
     print(logo)
     if is_correct:
       score += 1
