@@ -98,5 +98,105 @@ question_data = [
         "incorrect_answers": [
             "True"
         ]
+    },
+    {
+        "category": "Science: Animals",
+        "type": "boolean",
+        "difficulty": "easy",
+        "question": "Sharks are mammals.",
+        "correct_answer": "False - they are actually classified as fish.",
+        "incorrect_answers": [
+            "True"
+        ]
+    },
+    {
+        "category": "Science: Animals",
+        "type": "boolean",
+        "difficulty": "medium",
+        "question": "Sea otters have a favorite rock they use to break open food.",
+        "correct_answer": "True - they keep these treasures in the loose skin under their arms.",
+        "incorrect_answers": [
+            "False"
+        ]
+    },
+    {
+        "category": "Science: Animals",
+        "type": "boolean",
+        "difficulty": "medium",
+        "question": "The blue whale is the biggest animal to have ever lived.",
+        "correct_answer": "True - and that includes dinosaurs!",
+        "incorrect_answers": [
+            "False"
+        ]
+    },
+    {
+        "category": "Science: Animals",
+        "type": "boolean",
+        "difficulty": "easy",
+        "question": "The hummingbird egg is the world's smallest bird egg.",
+        "correct_answer": "True - on the flip side, ostriches lay the largest eggs.",
+        "incorrect_answers": [
+            "False"
+        ]
+    },
+    {
+        "category": "Science: Animals",
+        "type": "boolean",
+        "difficulty": "easy",
+        "question": "Bats are blind.",
+        "correct_answer": "False - bats often find their way using ultrasound but their eyes work, just not particularly well).",
+        "incorrect_answers": [
+            "True"
+        ]
+    },
+    {
+        "category": "Science: Animals",
+        "type": "boolean",
+        "difficulty": "easy",
+        "question": "A dog sweats by panting its tongue.",
+        "correct_answer": "False - canines sweat through glands in their paws.",
+        "incorrect_answers": [
+            "True"
+        ]
+    },
+    {
+        "category": "Science: Animals",
+        "type": "boolean",
+        "difficulty": "easy",
+        "question": "It takes a sloth two weeks to digest a meal.",
+        "correct_answer": "True - that’s the slowest digestion time of any mammal!",
+        "incorrect_answers": [
+            "False"
+        ]
+    },
+    {
+        "category": "Science: Animals",
+        "type": "boolean",
+        "difficulty": "medium",
+        "question": "Galapagos tortoises sleep up to 16 hours a day.",
+        "correct_answer": "True - and they can go a year without food or water, so they have lots of time for extra sleep.",
+        "incorrect_answers": [
+            "False"
+        ]
+    },
+    {
+        "category": "Science: Animals",
+        "type": "boolean",
+        "difficulty": "medium",
+        "question": "The goat is the national animal of Scotland.",
+        "correct_answer": "False - it is the unicorn.",
+        "incorrect_answers": [
+            "True"
+        ]
+    },
+    {
+        "category": "Science: Animals",
+        "type": "boolean",
+        "difficulty": "medium",
+        "question": "An octopus has seven hearts.",
+        "correct_answer": "False - it has three hearts and they do a lot of work.",
+        "incorrect_answers": [
+            "True"
+        ]
     }
 ]
