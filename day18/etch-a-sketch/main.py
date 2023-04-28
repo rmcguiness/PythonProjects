@@ -44,6 +44,10 @@ def pen_size_down():
     og_pen =   t.pensize() if t.pensize()>0 else 1  
     t.pensize(og_pen-1)
 
+def reset_screen():
+    t.home()
+    t.clear()
+
 screen.listen()
 
 screen.onkey(move_forward, "Up")
@@ -54,5 +58,6 @@ screen.onkeypress(t.penup, 'u')
 screen.onkeypress(t.pendown, 'd')
 screen.onkeypress(pen_size_up , '1')
 screen.onkeypress(pen_size_down, '2')
+screen.onkeypress(reset_screen, 'r')
 
 screen.exitonclick()
