@@ -25,6 +25,33 @@ class Snake():
             y = self.snake[i-1].ycor()
             self.snake[i].goto(x,y)
         self.head.forward(distance)
+
+    def grow(self):
+        new = Turtle("square")
+        new.penup()
+        new.color('white')
+        heading = self.head.heading()
+        new.setheading(heading)
+        if heading == 0:
+            x = self.head.xcor() + 22
+            y = self.head.ycor()
+            new.goto(x,y)
+        elif heading == 90:
+            x = self.head.xcor() 
+            y = self.head.ycor() + 22
+            new.goto(x,y)
+        elif heading == 180:
+            x = self.head.xcor() - 22
+            y = self.head.ycor() 
+            new.goto(x,y)
+        elif heading == 270:
+            x = self.head.xcor() 
+            y = self.head.ycor() - 22 
+            new.goto(x,y)
+
+        self.snake.insert(0,new)
+        self.head = new
+
     
     def move_up(self):
         if(self.head.heading() != DOWN):
@@ -44,7 +71,7 @@ class Snake():
             self.snake[0].setheading(RIGHT)
 
     def not_dead(self):
-        if(abs(self.head.pos()[0]) >= 286 or abs(self.head.pos()[1]) >= 286):
+        if(abs(self.head.pos()[0]) >= 300 or abs(self.head.pos()[1]) >= 300):
             return False
         for i in range(1,len(self.snake)):
             if self.snake[i].pos() == self.head.pos():
