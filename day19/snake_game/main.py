@@ -27,9 +27,9 @@ def play_snake():
         time.sleep(.1)
         snake.move_forward()
         player_alive = snake.not_dead()
-        if snake.head.distance(food) < 20:
+        if snake.head.distance(food) < 18:
             snake.grow()
-            food.relocate()
+            food.relocate(snake)
     
     play_again = screen.textinput('GAME OVER', f'Your score was {len(snake.snake)-3}!\n Would you like to play again(y/n)?').lower()
     if play_again =='y':
