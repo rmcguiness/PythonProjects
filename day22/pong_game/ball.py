@@ -36,8 +36,8 @@ class Ball(Turtle):
         self.xmove = -self.xmove
         self.ymove = self.ymove + (dist/15)
 
-    def in_play(self):
-        if self.xcor() < -380 or self.xcor() > 380:
-            return False
-        return True
+    def reset_ball(self, direction):
+        self.goto(0,0)
+        self.xmove = abs(self.xmove) * direction
+        self.ymove = 0
 
