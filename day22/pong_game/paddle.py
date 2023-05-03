@@ -4,23 +4,19 @@ PADDLE_POS = {
     "LEFT" : (-350,0)
 }
 
-class Paddle():
+class Paddle(Turtle):
     def __init__(self, side = "RIGHT"):
-        self.create_paddle(side)
-       
-    def create_paddle(self, side):
-        new = Turtle("square")
-        new.shapesize(5,1)
-        new.penup()
-        new.color('white')
-        new.goto(PADDLE_POS[side])
-
-        self.paddle = new
+        super().__init__()
+        self.shape("square")
+        self.shapesize(5,1)
+        self.penup()
+        self.color('white')
+        self.goto(PADDLE_POS[side])   
 
     def move_up(self):
-        y = self.paddle.ycor() + 15
-        self.paddle.goto(self.paddle.xcor(), y)
+        y = self.ycor() + 20
+        self.goto(self.xcor(), y)
 
     def move_down(self):
-        y = self.paddle.ycor() - 15
-        self.paddle.goto(self.paddle.xcor(), y)
+        y = self.ycor() - 20
+        self.goto(self.xcor(), y)
