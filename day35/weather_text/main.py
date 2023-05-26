@@ -1,24 +1,22 @@
 import requests
 import os
-from twilio.rest import Client
-from twilio.http.http_client import TwilioHttpClient
-
-
-
-OWM_API_KEY = "a5f02a0ba43bf499b17a3b1f27eeb2b8"
-OWM_ENDPOINT = "http://api.openweathermap.org/data/2.5/forecast?"
-
+from dotenv import load_dotenv
+# from twilio.rest import Client
+# from twilio.http.http_client import TwilioHttpClient
+load_dotenv()
 account_sid = "YOUR ACCOUNT SID"
 auth_token = os.environ.get("AUTH_TOKEN")
+omw_api_key = os.environ["OWM_API_KEY"]
+omw_endpoint = os.environ['OWM_ENDPOINT']
 
 w_params = {
     "lat":40.287102,
     "lon":-74.175880,
-    "appid": OWM_API_KEY,
+    "appid": omw_api_key,
     "exclude": "current,minutely,daily"
 }
 
-response = requests.get(OWM_ENDPOINT, params=w_params)
+response = requests.get(omw_endpoint, params=w_params)
 weather_data = response.json()
 hourly_data = weather_data['list'][:12]
 
