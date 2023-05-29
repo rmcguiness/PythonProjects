@@ -1,3 +1,5 @@
+import requests
+
 STOCK_NAME = "TSLA"
 COMPANY_NAME = "Tesla Inc"
 
@@ -8,6 +10,12 @@ NEWS_ENDPOINT = "https://newsapi.org/v2/everything"
 # When stock price increase/decreases by 5% between yesterday and the day before yesterday then print("Get News").
 
 #TODO 1. - Get yesterday's closing stock price. Hint: You can perform list comprehensions on Python dictionaries. e.g. [new_value for (key, value) in dictionary.items()]
+req_params = {
+    "function":'TIME_SERIES_DAILY',
+    "symbol":STOCK_NAME,
+    "apikey":'demo'
+}
+response = requests.get(STOCK_ENDPOINT, params=req_params)
 
 #TODO 2. - Get the day before yesterday's closing stock price
 
