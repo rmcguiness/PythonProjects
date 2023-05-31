@@ -6,8 +6,8 @@ from dotenv import load_dotenv
 load_dotenv()
 account_sid = "YOUR ACCOUNT SID"
 auth_token = os.environ.get("AUTH_TOKEN")
-omw_api_key = os.environ["OWM_API_KEY"]
-omw_endpoint = os.environ['OWM_ENDPOINT']
+omw_api_key = os.environ.get("OWM_API_KEY")
+omw_endpoint = os.environ.get('OWM_ENDPOINT')
 
 w_params = {
     "lat":40.287102,
