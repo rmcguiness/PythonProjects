@@ -1,4 +1,5 @@
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service as ChromeService
 
 chrome_driver_path = "/Users/ryanmcguiness/Documents/ChromeDriver/chromedriver"
@@ -9,7 +10,7 @@ driver  = webdriver.Chrome(service=service)
 
 driver.get("https://www.python.org")
 
-price = driver.find_element_by_id("priceblock_ourprice")
+price = driver.find_element(By.ID, "priceblock_ourprice")
 
 print(print.text)
 
