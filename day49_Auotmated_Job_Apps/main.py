@@ -42,8 +42,31 @@ for listing in all_listing:
         apply_btn.click()
         time.sleep(5)
 
-        phone_field = driver.find_element(By.CLASS_NAME, 'fb-single-line-text--input')
+        phone = driver.find_element(By.CLASS_NAME, 'fb-single-line-text--input')
+        if phone.text == "":
+            phone.send_keys(PHONE)
+
+        submit_button = driver.find_element_by_css_selector("footer button")
+
+        #If the submit_button is a "Next" button, then this is a multi-step application, so skip.
+        if submit_button.get_attribute("data-control-name") == "continue_unify":
+            close_button = driver.find_element_by_class_name("artdeco-modal__dismiss")
+            close_button.click()
+            time.sleep(2)
+            discard_button = driver.find_elements_by_class_name("artdeco-modal__confirm-dialog-btn")[1]
+            discard_button.click()
+            print("Complex application, skipped.")
+            continue
+        else:
+            submit_button.click()
+    
+        #Once application completed, close the pop-up window.
+        time.sleep(2)
+        close_button = driver.find_element_by_class_name("artdeco-modal__dismiss")
+        close_button.click()
     except NoSuchElementException:
         print('No application Button, skipped')
         continue
 
+time.sleep(5)
+driver.quit()
